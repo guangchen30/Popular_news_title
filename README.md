@@ -7,14 +7,15 @@ The aim of this project is to build a live dashboard showing the most frequently
  
 - The Mediastack API provides an HTTP GET endpoint that delivers live news data in JSON format.
 - The python script is scheduled to run every 5 mins by Lambda to pull all the latest news data, from which the script extracts the title and description of each news story and transforms them into phrases. The transformation is done by grouping each word with up to 3 subsequent words together (limited words to reduce complexity).
-- The script then loads the phrase data into Aurora DB so that BI tools like Metabase, can access and turn the data into visualisations.
-- Process the data further by running SQL queries inside Metabase and create the dashboard below
+- The script then loads the phrase data into a MySQL DB (Aurora).
+- Run SQL queries from Metabase to extract the data from Aurora and process it further to create the dashboard below.
 
 
-# Live Dashboard (URL)
+# [Live Dashboard](https://blackmamba.metabaseapp.com/public/dashboard/2dbe9036-ecfd-492e-a9b8-6c3489a8ff5b)
 
-
-
+- The dashboard is populated with near real-time data since the data pipeline runs every 5 minutes.
+- The dashboard shows the most frequently used phrases for today and the past week, as well as the most trending phrases for today.
 
 # Comments/conclusions
-- 
+- Most of the top phrases are only frequently used because they are very common the English language, not because they are trending, making it difficult to separate them from real trending phrases.
+- Also, analysing 2 to 4 word phrases may not be a good idea since they are too short to convey any useful information
