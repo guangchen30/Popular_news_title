@@ -1,2 +1,4 @@
-# news_data_real_time_pipeline
-Pulling news data in near real-time and visualising the data using metabase
+# Popular News Title
+
+This data pipeline pulls news data from [Mediastack API](https://docs.coincap.io/), processes the data and loads it into AWS Aurora.
+
