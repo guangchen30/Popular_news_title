@@ -1,6 +1,6 @@
 # Popular News Headlines
 
-The aim of this project is to build a live dashboard showing the most frequently used phrases in news headlines to see if any useful insights into recents trends can be gained. This is done by building a data pipeline in python that pulls live news data from [Mediastack API](https://mediastack.com) and processes the data using python and SQL.
+The aim of this project is to build a live dashboard showing the most frequently used phrases in news headlines to see if any useful insights into recents trends can be gained. This is done by building a data pipeline in python that pulls live news data from [Mediastack API](https://mediastack.com) and building a Metabase dashboard to visualise the data.
 
 # Architecture
 ![Arch](architecture.jpg)
