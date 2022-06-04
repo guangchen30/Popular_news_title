@@ -8,7 +8,7 @@ The aim of this project is to build a live dashboard showing the most frequently
 - The Mediastack API provides an HTTP GET endpoint that delivers live news data in JSON format.
 - The [python script](lambda_function.py) is scheduled to run every 5 mins by Lambda to pull all the latest news data, from which the script extracts the title and description of each news story and transforms them into phrases. The transformation is done by grouping each word with up to 3 subsequent words together (limited words to reduce complexity).
 - The script then loads the phrase data into a MySQL DB (Aurora).
-- Run SQL queries from Metabase to extract the data from Aurora and process it further to create the dashboard below.
+- Run [SQL queries](/metabase_sql) from Metabase to extract the data from Aurora and process it further to create the dashboard below.
 
 
 # [Live Dashboard](https://blackmamba.metabaseapp.com/public/dashboard/2dbe9036-ecfd-492e-a9b8-6c3489a8ff5b)
