@@ -7,7 +7,7 @@ The aim of this project is to build a live dashboard showing the most frequently
  
 - The Mediastack API provides an HTTP GET endpoint that delivers live news data in JSON format.
 - The [python script](lambda_function.py) is scheduled to run every 5 mins by Lambda to pull all the latest news data, from which the script extracts the title and description of each news story and transforms them into phrases. The transformation is done by grouping each word with up to 3 subsequent words together (limited words to reduce complexity).
-- The script then loads the phrase data into a MySQL DB (Aurora). OLAP databases like Snowflake and Redshift would be more suitable for the analytical queries that will be running on Metabase, but for this project it is unlikely that more than 5 million rows will need to be processed by any single query. Therefore, a small Aurora instance is chosen as it is much cheaper than a Redshift or Snowflake cluster. 
+- The script then loads the phrase data into a MySQL DB (Aurora). OLAP databases like Snowflake and Redshift would be more suitable for the analytical queries that will be running on Metabase, but for this project it is unlikely that more than 5 million rows will need to be processed by any single query. Therefore, a small Aurora instance will be sufficient and ideal for this project to minise the running costs. 
 - Run [SQL queries](/metabase_sql) from Metabase to extract the data from Aurora and process it further to create the dashboard below.
 
 
