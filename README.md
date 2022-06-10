@@ -3,7 +3,7 @@
 The aim of this project is to build a live dashboard showing the most frequently used phrases in news headlines to see if we can gain any useful insights into recents trends from observing such data. This is done by building a data pipeline in python that pulls live news data from [Mediastack API](https://mediastack.com) and building a dashboard on Redash to visualise the data.
 
 # Architecture
-![Arch](architecture.jpg)
+![Arch](assets/pipeline.jpg)
  
 - The Mediastack API provides an HTTP GET endpoint that delivers live news data in JSON format.
 - The [python script](lambda_function.py) is scheduled to run every 5 mins by Lambda to pull all the latest news data, from which the script extracts the title and description of each news story and transforms them into phrases. The transformation is done by grouping each word with up to 3 subsequent words together (limited words to reduce complexity).
