@@ -1,6 +1,6 @@
 # Popular News Headlines
 
-The aim of this project is to build a live dashboard showing the most frequently used phrases in news headlines to see if any useful insights into recents trends can be gained. This is done by building a data pipeline in python that pulls live news data from [Mediastack API](https://mediastack.com) and building a Metabase dashboard to visualise the data.
+The aim of this project is to build a live dashboard showing the most frequently used phrases in news headlines to see if we can gain any useful insights into recents trends from observing such data. This is done by building a data pipeline in python that pulls live news data from [Mediastack API](https://mediastack.com) and building a Metabase dashboard to visualise the data.
 
 # Architecture
 ![Arch](architecture.jpg)
@@ -11,10 +11,10 @@ The aim of this project is to build a live dashboard showing the most frequently
 - Run [SQL queries](/metabase_sql) from Metabase to extract the data from Aurora and process it further to create the dashboard below.
 
 
-# [Live Dashboard](https://blackmamba.metabaseapp.com/public/dashboard/2dbe9036-ecfd-492e-a9b8-6c3489a8ff5b)
+# [Live Dashboard](http://ec2-18-183-79-50.ap-northeast-1.compute.amazonaws.com/public/dashboards/iDdhUeO0K6MzT2izcGGaFqDlPOnl6gR3mIYSajl9?org_slug=default&p_w3_Search%20this%20phrase=stock%20market)
 
-- The dashboard is populated with near real-time data since the data pipeline runs every 5 minutes.
-- The dashboard shows the most frequently used phrases for today and the past week, as well as the most trending phrases for today.
+- This dashboard gets populated with the latest data every hour
+- The dashboard shows the total numbers of news headlines and phrases collected each day, as well as today's most trending phrases and this week's most popular phrases
 
 # Comments/conclusions
 - Most of the top phrases are only frequently used because they are very common the English language, not because they are trending, making it difficult to separate them from real trending phrases.
