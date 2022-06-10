@@ -12,7 +12,7 @@ The aim of this project is to build a live dashboard showing the most frequently
 
 
 # [Live Dashboard](http://ec2-18-183-79-50.ap-northeast-1.compute.amazonaws.com/public/dashboards/iDdhUeO0K6MzT2izcGGaFqDlPOnl6gR3mIYSajl9?org_slug=default&p_w3_Search%20this%20phrase=stock%20market)
-
+![Arch](/assets/dashboard_screenshot.png)
 - This dashboard gets populated with the latest data every hour
 - The dashboard shows the total numbers of news headlines and phrases collected each day, as well as today's most trending phrases and this week's most popular phrases
 
